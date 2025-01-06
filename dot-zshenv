@@ -1,0 +1,2 @@
+# This file is read by all invokations of zsh
+export ZDOTDIR="$HOME/.config/zsh"
