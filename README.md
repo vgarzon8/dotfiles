@@ -34,3 +34,5 @@
 - `fzf`
 - `lsd`
 - `ripgrep`
+- `fd`
+
