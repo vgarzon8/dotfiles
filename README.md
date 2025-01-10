@@ -1,6 +1,6 @@
 ## Shell configuration files
 
-### Shell config
+### Zsh config
 
 - iTerm2 color scheme
 - Nerd Fonts
@@ -11,7 +11,18 @@
   - zsh-users/zsh-syntax-highlighting
   - zsh-users/zsh-completions
   - zsh-users/zsh-autosuggestions
-      
+
+### Tmux
+
+- TPM plugin manager
+- tmux-plugins/tpm
+- tmux-plugins/tmux-sensible
+- catppuccin/tmux#v2.1.2
+
+### Neovim
+
+- kickstart.nvim
+
 
 ### Command line tools
 
@@ -22,3 +33,4 @@
 - `zoxide`
 - `fzf`
 - `lsd`
+- `ripgrep`
