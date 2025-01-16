@@ -14,3 +14,8 @@ export CARGO_HOME=/Users/48678/rust/cargo
 # Add nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# local env vars
+export VISUAL=nvim
+export EDITOR=$VISUAL
+export NODE_EXTRA_CA_CERTS=~/lib/cert/zscaler.pem
