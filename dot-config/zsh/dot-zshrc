@@ -32,7 +32,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
 # load completions
-autoload -U compinit && compinit
+autoload -U compinit && compinit -d ~/.cache/zsh/.zcompdump
 zinit cdreplay -q  # replay all cached completions
 
 # vi mode
