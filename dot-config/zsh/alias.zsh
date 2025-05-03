@@ -7,3 +7,4 @@ alias dfc='for dir in */; do echo "$(find "$dir" -type f | wc -l) "$dir""; done 
 alias dirs='dirs -v'
 alias vim='nvim'
 alias vi='nvim'
+alias cursor='/Applications/Cursor.app/Contents/Resources/app/bin/cursor'
