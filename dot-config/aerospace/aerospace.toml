@@ -124,11 +124,11 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
-alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+# alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
 alt-b = 'workspace B'
 # alt-c = 'workspace C'
 # alt-d = 'workspace D'
-# alt-e = 'workspace E'
+alt-e = 'workspace E'
 # alt-f = 'workspace F'
 # alt-g = 'workspace G'
 # alt-i = 'workspace I'
@@ -157,11 +157,11 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
-alt-shift-a = 'move-node-to-workspace A'
+# alt-shift-a = 'move-node-to-workspace A'
 alt-shift-b = 'move-node-to-workspace B'
 # alt-shift-c = 'move-node-to-workspace C'
 # alt-shift-d = 'move-node-to-workspace D'
-# alt-shift-e = 'move-node-to-workspace E'
+alt-shift-e = 'move-node-to-workspace E'
 # alt-shift-f = 'move-node-to-workspace F'
 # alt-shift-g = 'move-node-to-workspace G'
 # alt-shift-i = 'move-node-to-workspace I'
@@ -210,12 +210,12 @@ shift-down = ['volume set 0', 'mode main']
 
 # Move windows to workspaces based on their app-id
 [[on-window-detected]]
-if.app-id = 'com.microsoft.Outlook'
-run = "move-node-to-workspace O"
-
-[[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92'
+run = 'move-node-to-workspace E'
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
@@ -226,5 +226,14 @@ if.app-id = 'com.tinyspeck.slackmacgap'
 run = 'move-node-to-workspace M'
 
 [[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = "move-node-to-workspace O"
+
+[[on-window-detected]]
+if.app-id = 'com.googlecode.iterm2'
+run = "move-node-to-workspace T"
+
+[[on-window-detected]]
 if.app-id = 'us.zoom.xos'
 run = 'move-node-to-workspace Z'
+
