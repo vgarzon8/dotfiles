@@ -4,16 +4,16 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 
 # Docker init
-source /Users/48678/.docker/init-zsh.sh || true 
-
+source $HOME/.docker/init-zsh.sh || true 
 # Docker cli completions
-fpath=(/Users/48678/.docker/completions $fpath)
+FPATH="$HOME/.docker/completions:$FPATH"
+fpath=($HOME/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 
 # Rust Cargo utility
-export RUSTUP_HOME=/Users/48678/rust/rustup
-export CARGO_HOME=/Users/48678/rust/cargo
+export RUSTUP_HOME=$HOME/rust/rustup
+export CARGO_HOME=$HOME/rust/cargo
 . ${CARGO_HOME}/env
 
 # Add nvm
