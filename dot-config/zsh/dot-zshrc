@@ -71,3 +71,12 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # local tool setup
 [ -f "$HOME/.config/zsh/local.zsh" ] && source "$HOME/.config/zsh/local.zsh"
+
+# If in a Cursor terminal, tear down pl9k prompt
+if [[ -n $CURSOR_TRACE_ID ]]; then
+  PROMPT_EOL_MARK=""
+  test -e "${HOME}/lib/zsh/iterm2_shell_integration.zsh" && source "${HOME}/lib/zsh/iterm2_shell_integration.zsh"
+  precmd() { print -Pn "\e]133;D;%?\a" }
+  preexec() { print -Pn "\e]133;C;\a" }
+  prompt_powerlevel9k_teardown
+fi
