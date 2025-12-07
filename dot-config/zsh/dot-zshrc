@@ -74,6 +74,7 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # If in a Cursor terminal, tear down pl9k prompt
 if [[ -n $CURSOR_TRACE_ID ]]; then
+  _ZO_DOCTOR=0
   PROMPT_EOL_MARK=""
   test -e "${HOME}/lib/zsh/iterm2_shell_integration.zsh" && source "${HOME}/lib/zsh/iterm2_shell_integration.zsh"
   precmd() { print -Pn "\e]133;D;%?\a" }
