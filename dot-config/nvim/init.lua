@@ -690,6 +690,8 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        pyright = {}, -- see after/lsp/pyright.lua for config
+        ruff = {}, -- see after/lsp/ruff.lua for config
 
         lua_ls = {
           -- cmd = { ... },
@@ -723,6 +725,8 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'pyright', -- Python LSP
+        'ruff', -- Python linter and formatter
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
