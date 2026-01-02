@@ -19,9 +19,6 @@ return {
     },
   },
 
-  -- GitHub Copilot plugin -- requires node.js
-  { 'github/copilot.vim' },
-
   -- Improve viewing of Markdown files
   {
     'MeanderingProgrammer/render-markdown.nvim',
