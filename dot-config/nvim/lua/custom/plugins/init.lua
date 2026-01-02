@@ -22,6 +22,10 @@
 --        end,
 --    }
 return {
-  'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
-  'github/copilot.vim', -- GitHub Copilot plugin Requires node.js
+  -- Detect tabstop and shiftwidth automatically
+  'NMAC427/guess-indent.nvim',
+  -- GitHub Copilot plugin Requires node.js
+  'github/copilot.vim',
+  -- Highlight todo, notes, etc in comments
+  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 }
