@@ -11,7 +11,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
-
--- TODO: Find permanent fix
--- Disable Python 3 provider for faster startup if not needed
-vim.g.loaded_python3_provider = 0
