@@ -84,3 +84,6 @@ vim.o.confirm = true
 
 -- Set default border for floating windoes
 vim.o.winborder = 'rounded'
+
+-- set `:help termguicolors`
+vim.o.termguicolors = true
