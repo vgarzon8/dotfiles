@@ -87,3 +87,12 @@ vim.o.winborder = 'rounded'
 
 -- set `:help termguicolors`
 vim.o.termguicolors = true
+
+-- set external grep program
+if vim.fn.executable 'rg' == 1 then
+  vim.o.grepprg = 'rg --vimgrep --smart-case'
+  vim.o.grepformat = '%f:%l:%c:%m'
+else
+  vim.o.grepprg = 'grep -RIn'
+  vim.o.grepformat = '%f:%l:%c:%m'
+end
