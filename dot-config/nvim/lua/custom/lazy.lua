@@ -27,6 +27,8 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: The import below automatically adds plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --
+  -- { 'LazyVim/LazyVim', import = 'lazyvim.plugins' },
+  -- { import = 'lazyvim.plugins.extras.lang.python' },
   { import = 'custom.plugins' },
   --
   -- Additional kickstart plugins
