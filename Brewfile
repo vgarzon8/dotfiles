@@ -60,3 +60,5 @@ cask "font-fira-mono-nerd-font"
 cask "font-meslo-lg-nerd-font"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
