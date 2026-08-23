@@ -12,7 +12,7 @@ compinit
 # rust Cargo utility
 export RUSTUP_HOME=$HOME/rust/rustup
 export CARGO_HOME=$HOME/rust/cargo
-. ${CARGO_HOME}/env
+[ -s ${CARGO_HOME}/env ] && \. ${CARGO_HOME}/env
 
 # add nvm
 export NVM_DIR="$HOME/.nvm"
