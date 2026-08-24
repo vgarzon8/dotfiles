@@ -29,13 +29,21 @@ Create folders in `~/.config` for each application that requires configuration f
 mkdir -p ~/.config/{aerospace,ghostty,nvim,tmux,yazi,zsh}
 ```
 
-Create symlinks to dotfiles
+Check for conflicts in symlinks
+```bash
+just dryrun
+```
+
+Create symlinks
 ```bash
 just stow
 ```
 
-### Install yazi plugins
+### Install plugins
 
+Zsh, Tmux, and Neovim plugins will be installed automatically when the respective applications are launched for the first time.
+
+To install Yazi plugins:
 ```bash
 ya pkg install
 ```
