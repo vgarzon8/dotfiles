@@ -1,6 +1,9 @@
 default:
     @just --list --unsorted
 
+dryrun:
+    stow --target=$HOME --dotfiles --simulate .
+
 stow:
     stow --target=$HOME --dotfiles .
 
