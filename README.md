@@ -1,79 +1,42 @@
-## Shell configuration
+## Environment setup
 
-### Command line tools
+This repository contains dotfiles and configuration files for various tools and applications.  The installation assumes a fresh install of macOS and the use of zsh as the default shell.
+
+### Package manager: Homebrew
 
 - Install [Homebrew](https://brew.sh)
-- Install packages
+- Install required utilities
 ```bash
-brew install gh stow tmux just bat zoxide fzf lsd ripgrep fd yazi glow
+brew install gh just stow
 ```
 
-### Configuration files
+### Clone repo
 
-- Clone dotfiles repository
 ```bash
-gh repo clone vgarzon8/dotfiles ~/repos/dotfiles
+gh repo clone vgarzon8/dotfiles ~/path/to/local/repo
 ```
 
-- Create links using `stow` 
+### Install packages
+
 ```bash
-cd ~/repos/dotfiles
+brew bundle install --file=Brewfile
+```
+
+### Create symlinks for dotfiles
+
+Create folders in `~/.config` for each application that requires configuration files.
+```bash
+mkdir -p ~/.config/{aerospace,ghostty,nvim,tmux,yazi,zsh}
+```
+
+Create symlinks to dotfiles
+```bash
 just stow
 ```
-- See `justfile` for more targets
 
-### Fonts
-
-- Nerd Fonts with homebrew
+### Install yazi plugins
 
 ```bash
-brew search nerdfont
-brew install font-meslo-lg-nerd-font font-fira-code-nerd-font font-fira-mono-nerd-font
+ya pkg install
 ```
-
-### Custom `kickstart.nvim` nvim config
-
-- Clone forked repo
-```bash
-gh repo clone vgarzon8/kickstart.nvim ~/.config/nvim
-```
-
-### Window management
-
-```bash
-brew install --cask nikitabobko/tap/aerospace
-```
-
-### Zsh config info
-
-- [Catppuccin](https://github.com/catppuccin/iterm) color scheme
-  - Alternatives:
-    - [iTerm2](https://iterm2colorschemes.com/),
-    - [Tokyo Night](https://github.com/folke/tokyonight.nvim)
-- [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
-  - Examples:
-    - Meslo
-    - Fira Code, Fira Mono
-- `zinit` plugin manager
-- Powerlevel10k theme
-- Zsh plugins
-  - romkatv/powerlevel10k
-  - zsh-users/zsh-syntax-highlighting
-  - zsh-users/zsh-completions
-  - zsh-users/zsh-autosuggestions
-
-### Tmux
-
-- TPM plugin manager
-- tmux-plugins/tpm
-- tmux-plugins/tmux-sensible
-- catppuccin/tmux#v2.1.2
-
-### Neovim
-
-- kickstart.nvim
-- Copilot.nvim
-- github/copilot.vim
-- stevearc/oil.nvim
-- folke/snacks.nvim -- dashboard
 
